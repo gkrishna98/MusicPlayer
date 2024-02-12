@@ -19,7 +19,6 @@ function PlayerMainPage() {
     apiService({
       url: `${AppConfig?.baseURL}/api/v1/tracks?limit=5&cursor=1`,
     }).then((response) => {
-      console.log("res", response);
       setPlaylist(response?.body?.tracks);
     });
   }
